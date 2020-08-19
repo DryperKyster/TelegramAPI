@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 'android-R'
-    buildToolsVersion '30.0.0rc2'
-    
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
     defaultConfig {
         applicationId "br.com.vevelo.telegramapi"
-        minSdkVersion 20
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName '1.0.0'
@@ -20,6 +20,6 @@ android {
 }
 
 dependencies {
-	api project(':tgapi')
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':lib')
 }
